@@ -50,7 +50,7 @@ var getListClient = function(){
     })
 }
 
-var addClient = function(){    
+var addClient = function(){     
     $("#btnaddclient").click(function(){
         token = $("#token").val();
         name = $("#nome").val();
