@@ -34,25 +34,57 @@
 
     <br />
     <div class="container">
-        <div class="col-md-4 order-md-2 mb-4">
+        <div class="col-md-9 order-md-2 mb-4">
+            <h3>Autenticação (Token)</h3>
             <form>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Usuário</label>
+                    <label for="">Usuário</label>
                     <input type="text" class="form-control" id="user" name="user" aria-describedby="" placeholder="Usuário" value="squad5user" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <label for="">Password</label>
                     <input type="password" class="form-control" id="pass" name="pass" placeholder="Senha" value="squad5userpass" />
                 </div>
                 <div class="form-group">
-                        <label for="exampleInputPassword1">Token</label>
-                        <textarea class="form-control" rows="5" id="token"></textarea>
-                    </div>
-
-                <button type="submit" class="btn btn-primary">Gerar Token</button>
+                  <label for="">Token</label>
+                  <textarea class="form-control" rows="3" id="token" readonly="True"></textarea>
+                </div>
+                <label for="">API</label>
+                <small><pre>POST /auth/token/ <b>{username:user,password:pass}</b></pre></small>
+                <button type="button" id="btntoken" class="btn btn-primary">Gerar Token</button>                
             </form>
+            <hr />
         </div>
+        <hr />
+        <div class="col-md-12 order-md-2 mb-4">
+          <h3>Clientes</h3>
+          <form>
+            <div class="row">
+              <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="">Lista de Clientes</label>
+                    <textarea class="form-control" rows="8" id="listClients" readonly="True"></textarea>
+                  </div> 
+                  <button type="button" id="btngetclients" class="btn btn-primary">Listar Clientes</button>      
+              </div>
 
+              <div class="col-md-8">
+                  <div class="form-group">
+                      <label>Cadastrar Cliente</label>
+                      <input type="text" class="form-control" id="nome" placeholder="Nome"/>
+                      <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" />
+                      <input type="text" class="form-control" id="email" placeholder="E-mail" />
+                      <input type="text" class="form-control" id="telefone" placeholder="Telefone" />
+                      <input type="text" class="form-control" id="cpf" placeholder="CPF" />
+                    </div> 
+                    <button type="button" id="btnaddclient" class="btn btn-primary">Cadastrar</button>        
+              </div>
+            </div>
+          </form>
+
+          <hr />
+          
+        </div>
     </div><!-- /.container -->
 
 
